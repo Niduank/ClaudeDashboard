@@ -148,9 +148,9 @@ The page drives Ghostty and iTerm2. Each session's terminal is read from its pro
   text (Enter adds a new line; the "Send" button or ⌘+Enter / Ctrl+Enter sends; 2000 characters max) into that terminal as a paste (so a new line never submits early) and presses Enter. It works while
   Claude is working too: Claude Code queues the message for the running turn. The card shows it at once as
   "You · sent" until the transcript has it (a queued message is written only when the running turn takes it).
-- *New session*: opens a tab in the folder and runs `claude --dangerously-skip-permissions`, from the drawer
+- *New session*: opens a Ghostty window (iTerm2: a tab) in the folder and runs `claude --dangerously-skip-permissions`, from the drawer
   (the session's folder) or the toolbar (any subfolder of a project root). In a folder Claude Code does not trust yet,
-  its trust dialog shows first: the session appears on the page once it is answered in the terminal. The tab opens in
+  its trust dialog shows first: the session appears on the page once it is answered in the terminal. It opens in
   Ghostty, or in iTerm2 when `BOARD_TERMINAL=iterm` is set (see Configuration).
 - *Close the session* (drawer, then confirm): hangs up the shell that runs `claude`, which ends the session
   and closes its tab; a background session is stopped with `claude stop`. The conversation stays resumable.

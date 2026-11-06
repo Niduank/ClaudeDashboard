@@ -706,11 +706,7 @@ _answered = set()
 NEW = {"ghostty": '''on run argv
 tell application "Ghostty"
 set cfg to {initial working directory:(item 1 of argv), initial input:(item 2 of argv)}
-if (count of windows) > 0 then
-new tab in front window with configuration cfg
-else
 new window with configuration cfg
-end if
 activate
 end tell
 end run''',
